@@ -1,4 +1,4 @@
--- Test de base qui doit foaire;nctionner
+-- Test de base qui doit fonctionner
 with Ada.Text_IO ; use Ada.Text_IO ;
 procedure unDebut is
 function aireRectangle(larg : integer; long : integer) return integer is 
@@ -8,9 +8,23 @@ aire := larg * long  ;
 return aire;
 end aireRectangle ;
 -- VARIABLES
+type point is record
+abcisse : integer ;
+ordonnee : integer ;
+end record;
+
 choix : integer ;
+test : integer ;
 -- PROCEDURE PRINCIPALE
 begin
-choix = -1 ;
+test = 3*2+(5-2)*6 ;
+choix = 1 ;
+if choix < 0 then
+choix = 1 ;
+elsif choix = 0 then
+choix = 1 ;
+else
+choix = 1 ;
+end if;
 aireRectangle(2,3) ;
 end unDebut ; eof

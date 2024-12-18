@@ -1,0 +1,16 @@
+-- Test avec une erreur d'imbrication : une variable est utilisée sans avoir était initialisée
+
+with Ada.Text_IO ; use Ada.Text_IO ;
+
+procedure Main is 
+
+a : Integer;
+b : Integer;
+
+begin
+a = 5 ;
+b = 6 ; 
+fonction(a,b);
+-- On utilise la fonction "fonction" alors qu'elle n'a pas été déclarée
+
+end Main ; eof

@@ -133,7 +133,7 @@ table_syntaxique = {
         # false
         (0, 6): ['EXPR', "INSTR'"],
         # for
-        (0, 7): [(0, 7), 'IDENT', (0, 10), (0, 22), (2, 12), 'EXPR', (2, 18), 'EXPR', (0, 12), 'INSTR_PLUS', (0, 5),
+        (0, 7): [(0, 7), 'IDENT', (0, 10), 'EXPR', (2, 18), 'EXPR', (0, 12), 'INSTR_PLUS', (0, 5),
                  (0, 12), (2, 11)],
         # if
         (0, 9): [(0, 9), 'EXPR', (0, 23), 'INSTR_PLUS', 'ELSIF_STAR', 'ELSE_BIN', (0, 5), (0, 9), (2, 11)],
@@ -388,6 +388,8 @@ table_syntaxique = {
         # Operator
         # !=
         (1, 8): ['EGAL', 'OPE4', "OPE3'"],
+        # ==
+        (1, 15): ['EGAL', 'OPE4', "OPE3'"],
         # =
         (1, 9): ['EGAL', 'OPE4', "OPE3'"],
         # .
@@ -458,6 +460,8 @@ table_syntaxique = {
         (1, 7): ['ORDRE', 'OPE5', "OPE4'"],
         # /=
         (1, 8): ["epsilon"],
+        # ==
+        (1,15): ["epsilon"],
         # =
         (1, 9): ["epsilon"],
         # .
@@ -532,6 +536,8 @@ table_syntaxique = {
         (1, 7): ["epsilon"],
         # /=
         (1, 8): ["epsilon"],
+        # ==
+        (1, 15): ["epsilon"],
         # =
         (1, 9): ["epsilon"],
         # .
@@ -612,6 +618,8 @@ table_syntaxique = {
         (1, 7): ["epsilon"],
         # /=
         (1, 8): ["epsilon"],
+        # ==
+        (1, 15): ["epsilon"],
         # =
         (1, 9): ["epsilon"],
         # .
@@ -746,6 +754,8 @@ table_syntaxique = {
         (1, 7): ["epsilon"],
         # /=
         (1, 8): ["epsilon"],
+        # ==
+        (1, 15): ["epsilon"],
         # =
         (1, 9): ["epsilon"],
         # .
@@ -843,7 +853,9 @@ table_syntaxique = {
         # =
         (1, 8): [(1, 8)],
         # /=
-        (1, 9): [(1, 9)]
+        (1, 9): [(1, 9)],
+        # ==
+        (1, 15): [(1, 15)]
     },
     'ORDRE': {
 

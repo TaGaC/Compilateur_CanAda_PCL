@@ -7,49 +7,72 @@ procedure erreursVariables is
 
 A : Integer ;
 B : Integer ;
-C : Char ; 
+C : Character ; 
+D : Integer := 4 ;
+E : Character := 5 ;
 
 begin
+
 -- On initialise une variable non déclarée
 z = 5 ;
 
--- On utilise une varible non initialisée
-y = A + 5 ;
+-- On utilise une variable non initialisée
+B = A ;
 
--- On initialise une variable avec un élément qui n'est pas de son type
-C = 1 ; 
+-- On initialise une variable avec une variable qui n'est pas de son type
+C = 23 ; 
+
+-- On initialise une variable avec une variable qui n'est pas de son type
+C = D ;
+
+
+
+
+
 
 end erreursVariables ; 
 
-function fonct(a: Integer, b: Integer) return Integer is c : Integer ;
+function fonct(e: Integer; f: Integer) return Integer is g : Integer ;
 begin
-c := a*b ;
-return c ;
+g := e*f ;
+return g ;
 end fonct ;
 
 -- La fonction ne se termine pas avec le bon identifiant à la suite du end 
-function error(e: Integer) return Integer is d : Integer ;
+function error(h: Integer) return Integer is i : Integer ;
 begin
-d := e ;
-retrun e ;
+i := h ;
+return h ;
 end noerror ;
 
 -- La fonction n'a pas de return
-function noReturn(e:Integer) return Integer is d : Integer ;
+function noReturn(k:Integer) return Integer is l : Integer ;
 begin
-d := e ;
+l := k ;
 end noReturn ;
 
 -- On crée une fonction avec un nom déjà utiliser 
-function fonct(a: Integer, b: Integer) return Integer is c : Integer ;
+function fonct(m: Integer; n: Integer) return Integer is o : Integer ;
 begin
-c := a-b ;
-return c ;
+o := m-n ;
+return o ;
 end fonct ;
 
+-- On crée une fonction avec un mauvais type de retour
+function fonctiontest(m: Integer; n: Integer) return Integer is o : Character ;
+begin
+o := m-n ;
+return o;
+end fonctiontest ;
 
+
+c : integer ;
+indice : integer ;
 
 begin 
+
+-- On initialise une variable avec une fonction qui n'a pas le retour de son type
+c = fonct(2,3) ;
 
 -- On appelle une fonction qui n'existe pas 
 fonction(2,3) ;
@@ -57,8 +80,13 @@ fonction(2,3) ;
 -- On appelle la fonction avec plus de paramètres 
 fonct(1,2,3) ;
 
+c = 2 ;
 -- On appelle la fonction avec un paramètre du mauvais type
-fonct(1,'a') ;
+fonct(1, C) ;
 
+for indice in 0_5 loop
+indice = 3 ;
+end loop ;
 
+ 
 end Main ; eof

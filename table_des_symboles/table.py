@@ -107,8 +107,10 @@ class table:
         return repr_str
 
     def __repr__(self):
+        print('\n\n')
         print(self.tds)
-        print(self.tds['F']['undebut'].sous_bloc['airerectangle'])
+        print('\n\n')
+        #print(self.tds['F']['undebut'].sous_bloc['airerectangle'])
         repr_str = self.extract_repr(self.tds)
         return repr_str
         print(self.tds)

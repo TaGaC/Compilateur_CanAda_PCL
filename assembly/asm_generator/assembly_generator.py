@@ -25,7 +25,8 @@ class assembly_generator:
         """
         Variable contenant le nombre de blocs existants, afin de pouvoir les différencier:
             0. if blocks
-            1. 
+            1. for loops
+            2. while loops
         """
         self.blocks_number = [0]
 
@@ -187,7 +188,7 @@ class assembly_generator:
                     elif element.children[0].value == "while":
                         print("while loop")
                     elif element.children[0].value == "for":
-                        print("for loop")
+                        self.add_for_loop()
 
     def dfs(self, node):
         self.write_assembly(node)

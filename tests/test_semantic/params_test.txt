@@ -1,0 +1,15 @@
+-- Test de base qui doit fonctionner
+with Ada.Text_IO ; use Ada.Text_IO ;
+
+procedure main is 
+
+function fonct(a: Integer, b: Integer) return Integer is c : Integer ;
+begin
+c := a-b ;
+return c ;
+end fonct ;
+
+begin 
+fonct(a,b,c) ;
+
+end main ;

@@ -2,7 +2,7 @@ import sys
 
 class variable:
 
-    def __init__(self, name, type_entree="None", mode="in", value = None, size=0, Dimension=0, ligne_declaration=None, ligne_utilisation=None, address=None):
+    def __init__(self, name, type_entree="None", mode="in", value = None, size=0, Dimension=0, ligne_declaration=None, ligne_utilisation=None, address=None, parametre = 0):
         self.name = name
         self.type = type_entree
         self.value = value
@@ -12,10 +12,11 @@ class variable:
         self.ligne_utilisation  = ligne_utilisation
         self.address = address
         self.mode = mode
+        self.parametre = parametre
         #Ajouter l'offset
 
     def __repr__(self):
-        return f"variable({self.name}) : {self.type}"
+        return f"variable({self.name},{self.type},{self.mode},{self.value},{self.size},{self.Dimension},{self.ligne_declaration},{self.ligne_utilisation},{self.address},{self.parametre})"
         """
         sys.stdout.write("\t\tType: " + str(self.type_entree))
         sys.stdout.write("\t\tTaille: " + str(self.Dimension))
@@ -33,10 +34,10 @@ class variable:
 
 class fonction:
 
-    def __init__(self, name, parametres = {}, type_de_retour = None, size=0, Dimension=0, ligne_declaration=None, ligne_utilisation=None, address=None):
+    def __init__(self, name, parametres = {}, var_de_retour = {}, size=0, Dimension=0, ligne_declaration=None, ligne_utilisation=None, address=None):
         self.name = name
         self.parametres = parametres
-        self.type_de_retour = type_de_retour
+        self.var_de_retour = var_de_retour
         self.size = size
         self.Dimension = Dimension
         self.ligne_declaration = ligne_declaration
@@ -47,7 +48,7 @@ class fonction:
         return "function name:  " + self.name
 
     def __str__(self):
-        return f"fonction({self.name}): {self.sous_bloc.__repr__()}"
+        return f"fonction({self.name}): {self.__repr__()}"
         """
         if len(self.parametres)>1:
             parametres_str = ""
@@ -80,7 +81,7 @@ class procedure:
         self.address = address
 
     def __repr__(self):
-        return f"procedure({self.name}) : self.{sous_bloc}"
+        return f"procedure({self.name}) : self.{self.parametres}"
         sys.stdout.write("\n\t => PROCEDURE\n")
         sys.stdout.write("\t\tNom: " + str(self.name))
         if len(self.parametres)>1:

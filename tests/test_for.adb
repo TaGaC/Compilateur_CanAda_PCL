@@ -6,7 +6,7 @@ I : integer;
 -- PROCEDURE PRINCIPALE
 begin
   test_for_var := 0;
-  for I in 1 .. 5 loop
+  for I in 2_5 loop
     test_for_var = 1 ;
   end loop;
 end test_for_procedure ; eof

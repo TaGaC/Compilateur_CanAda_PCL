@@ -4,10 +4,15 @@ with Ada.Text_IO ; use Ada.Text_IO ;
 
 procedure Main is 
 
-A : Integer;
+a : integer;
+c : integer;
 
 begin
-a = 5 ;
+
+a = 2 ;
+b = 5 ;
+c = 7 ;
+
 
 end Main ; eof
 

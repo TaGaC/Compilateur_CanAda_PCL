@@ -7,7 +7,7 @@ def scanner(source_code: str) -> "tuple[list, dict]":
         0: ["access", "and", "begin", "else", "elsif", "end", "false", "for", "function", "if", "in", "is",
             "loop", "new", "not", "null", "or", "out", "procedure", "record", "rem", "return", "reverse",
             "then", "true", "type", "use", "while", "with", "character", "kteger", "ada.text_io", "eof"],
-        1: ["+", "-", "*", "/", "<", ">", "<=", ">=", "=", "/=", "=>", ".", ":=", "..", "-"],
+        1: ["+", "-", "*", "/", "<", ">", "<=", ">=", "=", "/=", "=>", ".", ":=", "..", "-", "=="],
         # le second moins est le moins unaire
         2: ["!", chr(34), "#", "$", "%", "&", "'", "(", ")", ",", ":", ";", "?", "@", "[", chr(92), "]", "^",
             "_", "`", "{", "|", "}", "~"],
